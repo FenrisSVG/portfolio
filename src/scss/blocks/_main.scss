@@ -1,0 +1,82 @@
+.section{
+    padding: 0 1.2em 6em;
+
+    &-header{
+
+        &__name{
+            margin-bottom: .6em;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: $secondary-color;
+        }
+    }
+
+    &-body{
+        padding-bottom: 1em;
+
+        &__message{
+            margin-top: .3em;
+            margin-bottom: .5em;
+            font-size: 2.2rem;
+            padding-right: .2em;
+            line-height: 1.3;
+            color: $text-color;
+            opacity: .8;
+        }
+
+        &_aboutme{
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: $text-color;
+            opacity: .9;
+        }
+    }
+
+    &-footer{
+
+        &__link{
+            display: inline-block;
+            padding: 1em 1.5em;
+            font-size: 1.3rem;
+            text-decoration: none;
+            color: $secondary-color;
+            border: 1px solid;
+        }
+    }
+}
+
+.section-header__name,
+.section-body__message,
+.section-body__aboutme,
+.section-footer__link,
+.title{
+    letter-spacing: 1px;
+}
+
+.title{
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 13ch;
+    font-size: 2.6rem;
+    white-space: nowrap;
+    // text-decoration: underline;
+    // text-decoration-style: wavy;
+    // text-decoration-color: $secondary-color;
+    border-right: 4px solid #c99806;
+    color: $title-color;
+    animation: typing 3s steps(13),
+    blink 1s infinite step-end alternate;
+    overflow: hidden;
+
+    & span{
+        color: #c99806;
+    }
+}
+
+@keyframes typing{
+    from{ width: 0}
+}
+
+@keyframes blink{
+    50%{ border-color: transparent}
+}

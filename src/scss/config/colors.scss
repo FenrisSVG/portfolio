@@ -1,0 +1,19 @@
+:root {
+    --primary-color: #161719;
+    --secondary-color: #52d3aa;
+    --danger-color: #972745;
+    --background-color: #111213;
+    --text-color: #fff;
+    --title-color: hsl(40, 2%, 63%);
+    --menu-color: #6A5E5F;
+    --link-color: rgb(57, 107, 160);
+  }
+  
+  $primary-color: var(--primary-color);
+  $secondary-color: var(--secondary-color);
+  $danger-color: var(--danger-color);
+  $background-color: var(--background-color);
+  $text-color: var(--text-color);
+  $title-color: var(--title-color);
+  $menu-color: var(--menu-color);
+  $link-color: var(--link-color);

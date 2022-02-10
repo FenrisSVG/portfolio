@@ -1,0 +1,87 @@
+.conocimientos-section{
+    padding: 0 1.2em 5em;
+}
+
+.conocimientos-article{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__text{
+        margin-bottom: 1.2em;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: $title-color;
+
+        & span{
+            color: $secondary-color;
+        }
+    }
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1em;
+    border-radius: 5px;
+    background-color: $primary-color;
+
+    &-header{
+        padding: .5em;
+
+        &__text{
+            margin-top: 1.2em;
+            font-size: 1.2rem;
+            text-align: center;
+            letter-spacing: 1px;
+            text-decoration: underline;
+            text-decoration-style: wavy;
+            text-decoration-color: #c99806;
+        }
+
+        &__title{
+            font-size: 2rem;
+            margin-bottom: .5em;
+
+            & span{
+                color: #c99806;
+            }
+        }
+
+        &__techno{
+            text-align: center;
+        }
+
+        &__icon{
+            filter: drop-shadow(1px 1px 5px #c99806);
+            font-size: 2.5rem;
+            color: $secondary-color;
+        }
+    }
+
+    &-footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__frameworks{
+            padding-bottom: 1em;
+        }
+
+        &__pre{
+            padding-bottom: .5em;
+        }
+
+        &__title{
+            margin-top: .7em;
+            font-size: 1.4rem;
+            color: $title-color;
+        }
+    }
+}
+
+.card-footer,
+.card-footer__pre{
+    border-top: 2px solid $title-color;
+}
