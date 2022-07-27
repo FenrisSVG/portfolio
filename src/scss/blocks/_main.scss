@@ -1,6 +1,15 @@
-.section{
-    padding: 0 1.2em 6em;
+.main{
+    padding: 0 1.2em;
 
+    @include laptop{
+        padding: 0;
+    }
+}
+
+.section{
+    @include laptop{
+        padding: 1em 20em;
+    }
     &-header{
 
         &__name{
@@ -8,6 +17,11 @@
             font-size: 1.1rem;
             font-weight: bold;
             color: $secondary-color;
+
+            @include laptop{
+                margin-bottom: .8em;
+                font-size: 1.3rem;
+            }
         }
     }
 
@@ -22,6 +36,11 @@
             line-height: 1.3;
             color: $text-color;
             opacity: .8;
+
+            @include laptop{
+                margin-bottom: .3em;
+                font-size: 3rem;
+            }
         }
 
         &_aboutme{
@@ -29,11 +48,22 @@
             line-height: 1.7;
             color: $text-color;
             opacity: .9;
+
+            @include laptop{
+                font-size: 1.5rem;
+            }
+
+            & span{
+                color: $secondary-color;
+            }
         }
     }
 
     &-footer{
-
+        @include laptop{
+        //    overflow: hidden;
+        }
+        
         &__link{
             display: inline-block;
             padding: 1em 1.5em;
@@ -41,6 +71,28 @@
             text-decoration: none;
             color: $secondary-color;
             border: 1px solid;
+
+            @include laptop{
+                position: relative;
+                font-size: 1.4rem;
+                overflow: hidden;
+            }
+
+            &::before{
+                @include laptop{
+                    position: absolute;
+                    content: '';
+                    display: block;
+                    top: 0;
+                    left: 0;
+                    border-right: 200px solid mediumpurple;
+                    border-bottom: 150px solid transparent;
+                    border-top: 0 solid transparent;
+                    border-left: 0 solid transparent;
+                    transform: translate(-110%,50%);
+                    z-index: -1;
+                }
+            }
         }
     }
 }
@@ -56,7 +108,7 @@
 .title{
     margin-top: 0;
     margin-bottom: 0;
-    width: 13ch;
+    width: 26ch;
     font-size: 2.6rem;
     white-space: nowrap;
     // text-decoration: underline;
@@ -64,11 +116,19 @@
     // text-decoration-color: $secondary-color;
     border-right: 4px solid #c99806;
     color: $title-color;
-    animation: typing 3s steps(13),
+    animation: typing 3s steps(25),
     blink 1s infinite step-end alternate;
     overflow: hidden;
 
-    & span{
+    @include laptop{
+        font-size: 4rem;
+    }   
+
+    &--js{
+        color: mediumpurple;
+    }
+
+    &--name{
         color: #c99806;
     }
 }
@@ -79,4 +139,126 @@
 
 @keyframes blink{
     50%{ border-color: transparent}
+}
+
+.about-section,
+.conocimientos-section,
+.projects-section,
+.section{
+    padding-bottom: 5em;
+
+    @include laptop{
+        padding-bottom: 8em;
+    }
+}
+
+// BLOQUE PARA LOS ICONOS DE LAS REDES PERSONALES.
+.socials{
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+    background-color: $primary-color;
+
+    @include laptop{
+        position: fixed;
+        flex-direction: column;
+        gap: 15px;
+        bottom: 0;
+        left: 0;
+        padding: 3em;
+        background-color: transparent;
+        z-index: 10;
+    }
+
+    &-icons__link{
+        font-size: 2rem;
+        color: $secondary-color;
+
+        @include laptop{
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@keyframes scaleIcon{
+    0%{
+        transform: scale(1);
+    }
+    33%{
+        transform: scale(1.1);
+    }
+    66%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+@media(Hover:hover){
+    .socials-icons__link:hover,
+    .section-footer__link:hover,
+    .projects-article__footer-link:hover{
+        filter: contrast(160%);
+    }
+
+    .socials-icons:hover{
+        animation: scaleIcon linear infinite 2s alternate;
+    }
+
+    .section-footer__link:hover::before{
+        transform: translate(0,0);
+        transition: all .5s ease-in;
+    }
+
+    .section-footer__link:hover{
+        color: #c99803;
+    }
+}
+
+@media(prefers-reduced-motion){
+    .socials-icons:hover{
+        animation: scaleIcon linear infinite 4s alternate;
+    }
+}
+
+// ESTILOS PARA EL CONTACTO PERSONAL
+.mail{
+    display: none;
+
+    @include laptop{
+        position: fixed;
+        display: flex;
+        align-items: center;
+        bottom: 140px;
+        right: 0;
+        width: 180px;
+        height: 180px;
+        transform: rotate(270deg);
+
+        &-container{
+            @include laptop{
+                position: relative;
+            }
+
+            &::before{
+                @include laptop{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    bottom: 8px;
+                    left: -130px;
+                    width: 15px;
+                    height: 2px;
+                    border-radius: 5px;
+                    background-color: $secondary-color;
+                    box-shadow: 20px 0 0 $secondary-color,
+                    40px 0 0 $secondary-color,
+                    60px 0 0 $secondary-color,
+                    80px 0 0 $secondary-color,
+                    100px 0 0 $secondary-color;
+                }
+            }
+        }
+    }
 }

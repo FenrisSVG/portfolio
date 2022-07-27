@@ -1,5 +1,7 @@
 .about-section{
-    padding: 0 1.2em 6em;
+    @include laptop{
+        padding: 0 8em;
+    }
 }
 
 .about-title,
@@ -13,6 +15,14 @@
     &--color{
         font-size: 1.1rem;
         color: $secondary-color;
+
+        @include laptop{
+            font-size: 1.3rem;
+        }
+    }
+
+    @include laptop{
+        font-size: 2rem;
     }
 
     &::after{
@@ -39,12 +49,27 @@
     flex-direction: column;
     gap: 20px;
 
+    @include laptop{
+        flex-direction: row;
+        // justify-content: space-between;
+        gap: 100px;
+    }
+
+    &__header{
+        @include laptop{
+            width: 60%;
+        }
+    }
 
     &__text{
         font-size: .9rem;
         line-height: 1.8;
         font-weight: bold;
         color: $title-color;
+
+        @include laptop{
+            font-size: 1.2rem;
+        }
 
         &--color{
             color: $secondary-color;
@@ -55,6 +80,13 @@
         position: relative;
         align-self: center;
         animation: move 2s infinite ease-in-out;
+
+        @include laptop{
+            width: 300px;
+            height: 400px;
+            border-radius: 5px;
+            transform: perspective(800px);
+        }
 
         &::before{
             content: '';
@@ -70,7 +102,13 @@
     }
 
     &__image{
-        aspect-ratio: 16/9;
+        aspect-ratio: 1;
+
+        @include laptop{
+            height: 100%;
+            filter: sepia(100%) hue-rotate(100deg) saturate(200%);
+            transition: filter .5s ease-in;
+        }
     }
 }
 
@@ -89,5 +127,12 @@
 @media(prefers-reduced-motion){
     .about-section__footer{
         animation: move 4s infinite ease-in-out;
+    }
+}
+
+@media(Hover:hover){
+    .about-article__image:hover{
+        filter: sepia(0%) hue-rotate(0deg) saturate(100%);
+        cursor: pointer;
     }
 }

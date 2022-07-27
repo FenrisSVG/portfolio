@@ -5,21 +5,26 @@
                 <img src="../assets/logo.png" alt="portfolio logo"
                 class="logo">
             </div>
-            <div class="menu-icon" @click="showMenu">
+            <div class="menu-icon" @click="showMenu" data-test-id="menu-icon-test">
                 <i class="fas fa-bars menu-bars"></i> 
             </div>
         </div>
         <nav class="nav" id="nav">
-            <div class="nav-close" @click="hideMenu">
+            <div class="nav-close" @click="hideMenu" data-test-id="icon-close-menu">
                 <i class="fas fa-times nav-times"></i>
             </div>
             <ul class="main-menu" v-if="listaObjetos.length > 0">
                 <li class="main-menu__item" v-for="item in listaObjetos" :key="item.id">
-                    <a :href="item.href" class="main-menu__link"  rel="nofollow noopener noreferrer">{{item.name}}</a>
+                    <a :href="item.href" class="main-menu__link"  rel="nofollow noopener noreferrer"
+                    data-test-id="main-menu-test">{{item.name}}</a>
                 </li>
             </ul>
             <div class="menu-footer">
-                <p class="menu-footer__text">Felix Sandoval Portfolio</p>
+                <div class="languages">
+                    <img src="../assets/flags/es.svg" alt="spanish flag" class="languages__flags">
+                    <img src="../assets/flags/en.svg" alt="america flag" class="languages__flags">
+                </div>
+                <p class="menu-footer__text" data-test-id="menu-footer-test">Felix Sandoval Portfolio</p>
             </div>
         </nav>
     </header>

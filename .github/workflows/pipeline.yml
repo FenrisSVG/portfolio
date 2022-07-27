@@ -1,0 +1,46 @@
+name: Deployment Porfolio to Vercel Domain
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches: [main]
+    types: [opened,synchronize]
+
+jobs: 
+  avoid_reduncy:
+    runs-on: windows-2019
+    steps:
+      - name: Cancel Previous Rdudant Bulds
+        uses: styfle/cancel-workflow-action@0.9.1
+        with:
+          access_token: ${{ github.token }}
+
+  build:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Install dependencies
+        run: npm ci
+      - name: Vite
+        run: npm run dev
+
+  e2e-test:
+    needs: [build]
+    runs-on: windows-2019
+    steps: 
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Install dependencies
+        run: npm ci
+      - name: Cypress run
+        uses: cypress-io/github-actions@v2
+        with:
+          command: 'npm run cypress:open'
+          start: 'npm run dev'
+          wait-on: http://localhost:3000
+

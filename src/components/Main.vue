@@ -5,7 +5,7 @@
                 <p class="section-header__name">
                     Hola, mi nombre es
                 </p>
-                <h1 class="title">Félix <span>Sandoval</span></h1>
+                <h1 class="title"><span class="title--js">Const</span> name = <span class="title--name">Félix Sandoval</span></h1>
             </header>
             <div class="section-body">
                 <p class="section-body__message">
@@ -13,30 +13,32 @@
                     pequeñas sean grandiosas.
                 </p>
                 <p class="section-body_aboutme">
-                    Soy estudiante de cuarto año de la carrera Ingenieria en Sistemas
-                    cursando en la Universidad Nacional de Ingenieria. Me interesa el
-                    area de desarollador de aplicaciones web y móvil.
+                    Soy estudiante 👨‍🎓 de cuarto año de la carrera <span>Ingenieria en Sistemas</span>
+                    cursando en la <span>Universidad Nacional de Ingeniejria</span>. Me interesa el
+                    área de desarollador de <span>aplicaciones web y móvil</span>.
                 </p>
             </div>
             <footer class="section-footer">
                 <a href="mailto:fsandovalchavez3@gmail.com"
                 rel="nofollow noopener noreferrer"
-                class="section-footer__link">Contáctame</a>
+                class="section-footer__link" data-test-id="contact-me-test">Contáctame</a>
             </footer>
         </section>
         <AboutMe/>
         <Conocimientos/>
+        <Projects/>
     </main>
 </template>
 
 <script>
 import AboutMe from './AboutMe.vue'
 import Conocimientos from './Conocimientos.vue'
+import Projects from './Projects.vue'
 
 export default {
     name: 'Main',
     components:{
-        AboutMe,Conocimientos
+        AboutMe,Conocimientos,Projects
     }
 }
 </script>

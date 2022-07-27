@@ -1,0 +1,211 @@
+.projects-section{
+    @include laptop{
+        padding: 0 8em 1em;
+    }
+}
+
+.projects-title{
+    @include laptop{
+        font-size: 1.8rem;
+    }
+}
+
+.projects-text{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: $title-color;
+
+    @include laptop{
+        margin-top: 1.2em;
+        margin-bottom: 1.8em;
+        font-size: 1.5rem;
+        line-height: normal;
+    }
+}
+
+.projects-article{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include laptop{
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    &__card{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1.5em;
+        border-radius: 10px;
+        background-color: $primary-color;
+        border: .5px solid $title-color;
+        overflow: hidden;
+        max-width: 500px;
+
+        @include laptop{
+            max-width: 450px;
+            padding-bottom: 16px;
+        }
+    }
+    
+    &__website{
+        display: block;
+        height: 250px;
+        width: 100%;
+        // backface-visibility: hidden;
+        // object-fit: cover;
+    }
+
+    &__name{
+        margin-bottom: .5em;
+        font-size: 1.5rem;
+
+        @include laptop{
+            font-size: 1.6rem;
+        }
+
+        &--link{
+            text-decoration: none;
+            color: $text-color;
+        }
+    }
+
+    &__body{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__techno{
+        display: flex;
+        gap: 15px;
+        
+        &--secondary{
+            gap: 20px;
+            justify-content: space-around;
+        }
+    }
+
+    &__devs{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        
+        &-icon{
+            font-size: 1.5rem;
+
+            &--sass{
+                display: none;
+            }
+
+            @include laptop{
+                font-size: 1.6rem;
+            }
+        }
+        
+        &-image{
+            max-width: 30%;
+
+            &--tailwind{
+                display: none;
+            }
+
+            @include laptop{
+                max-width: 25%;
+            }
+        }
+
+        &-text{
+            font-size: 1.2rem;
+            color: $title-color;
+            margin: 5px;
+        }
+
+        &--secondary{
+            gap: 7px;
+
+            @include laptop{
+                width: 100%;
+            }
+        }
+    }
+
+    &__description{
+        padding-bottom: .5em;
+
+        @include laptop{
+
+        }
+    }
+
+    &__about{
+        margin-top: .5em;
+        line-height: 1.6;
+        color: $title-color;
+
+        & span{
+            color: $secondary-color;
+        }
+
+        @include laptop{
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 3px;
+        }
+    }
+
+    &__footer{
+        text-align: right;
+
+        &-link{
+            margin-right: .3em;
+            font-size: 2rem;
+        }
+    }
+}
+
+.projects-article__devs-icon,
+.projects-article__footer-link,
+.projects-article__about span{
+    color: $secondary-color;
+}
+
+.projects-article__title,
+.projects-article__description{
+    min-width: 100%;
+}
+
+.projects-article__body,
+.projects-article__footer{
+    padding: 0 1.5em;
+
+    @include laptop{
+        padding: 0 2em;
+    }
+}
+
+.projects-text__link,
+.projects-description__link,
+.projects-article__about-link{
+    text-decoration: none;
+    color: $link-color;
+}
+
+.projects-text,
+.projects-article__name{
+    letter-spacing: 1px;
+}
+
+@media(Hover:hover){
+    .projects-article__devs-text:hover,
+    .projects-article__name--link:hover{
+        color: $secondary-color;
+        cursor: pointer;
+    }
+
+    .projects-article__website:hover{
+        filter: blur(2px);
+    }
+}

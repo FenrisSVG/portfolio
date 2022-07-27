@@ -1,5 +1,13 @@
 .conocimientos-section{
-    padding: 0 1.2em 5em;
+    @include laptop{
+        padding: 0 8em 5em 8em;
+    }
+}
+
+.conocimientos-title{
+    @include laptop{
+        font-size: 2rem;
+    }
 }
 
 .conocimientos-article{
@@ -7,11 +15,24 @@
     flex-direction: column;
     gap: 20px;
 
+    @include laptop{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
     &__text{
         margin-bottom: 1.2em;
         font-size: 1rem;
         line-height: 1.6;
         color: $title-color;
+
+        @include laptop{
+            min-width: 100%;
+            font-size: 1.5rem;
+            margin-bottom: .6em;
+            line-height: normal;
+        }
 
         & span{
             color: $secondary-color;
@@ -23,11 +44,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 1em;
+    padding-bottom: .8em;
     border-radius: 5px;
     background-color: $primary-color;
+    max-width: 500px;
 
-    &-header{
+    @include laptop{
+        flex-wrap: wrap;
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    &-header{      
         padding: .5em;
 
         &__text{
@@ -38,11 +66,21 @@
             text-decoration: underline;
             text-decoration-style: wavy;
             text-decoration-color: #c99806;
+
+            @include laptop{
+                margin-top: 7px;
+                margin-bottom: 6px;
+            }
         }
 
         &__title{
+            margin-bottom: .6em;
             font-size: 2rem;
-            margin-bottom: .8em;
+
+            @include laptop{
+                font-size: 1.5rem;
+                margin-bottom: 0.5rem;
+            }
 
             & span{
                 color: #c99806;
@@ -54,9 +92,21 @@
         }
 
         &__icon{
-            filter: drop-shadow(1px 1px 5px #c99806);
             font-size: 2.5rem;
             color: $secondary-color;
+        }
+
+        &__image{
+            max-width: 60%;
+        }
+
+        &--flex{
+            @include laptop{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+            }
         }
     }
 
@@ -64,12 +114,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
 
         &__frameworks{
-            padding-bottom: 1em;
+            padding-bottom: 14px;
         }
 
         &__pre{
+            text-align: center;
             padding-bottom: .5em;
         }
 
@@ -77,6 +129,54 @@
             margin-top: .7em;
             font-size: 1.4rem;
             color: $title-color;
+
+            @include laptop{
+                margin-top: .9em;
+                margin-bottom: 7px;
+            }
+        }
+
+    }
+
+    &--one{
+        @include laptop{
+            order: 1;
+        }
+    }
+
+    &--two{
+        @include laptop{
+            order: 2;
+        }
+    }
+
+    &--three{
+        @include laptop{
+            order: 3;
+        }
+    }
+
+    &--four{
+        @include laptop{
+            order: 4;
+        }
+    }
+
+    &--five{
+        @include laptop{
+            order: 6;
+        }
+    }
+
+    &--six{
+        @include laptop{
+            order: 7;
+        }
+    }
+
+    &--seven{
+        @include laptop{
+            order: 5;
         }
     }
 }
@@ -85,3 +185,88 @@
 .card-footer__pre{
     border-top: 2px solid $title-color;
 }
+
+.card--one,
+.card--two,
+.card--three,
+.card--four,
+.card--seven{
+    @include laptop{
+        // padding: 0 1em;
+        min-width: 18%;
+    }
+}
+
+.card--five,
+.card--six{
+    @include laptop{
+        min-width: 48.95%;
+        flex-direction: row;
+        display: grid;
+        grid-template-columns: repeat(2,minmax(min-content,fit-content));
+        grid-template-rows: repeat(2,minmax(min-content,fit-content));
+        padding: 0;
+    }
+}
+
+.card--six{
+    @include laptop{
+        padding-bottom: 1.6em;
+    }
+}
+
+.card-footer{
+    @include laptop{
+        position: relative;
+        border-top: 0px transparent;
+        grid-column: 2/3;
+        grid-row: 1/3;
+    }
+
+    &::before{
+        @include laptop{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 25px;
+            left: 0;
+            height: 90%;
+            width: 1px;
+            background-color: $title-color;
+        }
+    }
+}
+
+.card-header--flex{
+    @include laptop{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        align-self: flex-start;
+    }
+}
+
+.card-header__title--flex{
+    @include laptop{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        justify-self: center;
+        align-self: flex-end;
+    }
+}
+
+.card:nth-of-type(2) .card-footer::before{
+    height: 80%;
+}
+
+.devicon-typescript-plain{
+    font-size: 2.5rem;
+    color: $secondary-color;
+}
+
+@media(hover:hover){
+    .card-header__text:hover{
+        color: $secondary-color;
+        cursor: pointer;
+    }
+}
+
