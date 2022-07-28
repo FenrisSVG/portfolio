@@ -158,9 +158,6 @@ export default {
             putText(0,6,7)
             putText(1,11,12)
         }
-    },
-    mounted(){
-        return this.putSpan();
     }
 }
 </script>

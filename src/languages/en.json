@@ -2,7 +2,7 @@
     "nav": {
         "about": "About Me",
         "knowledge": "Knowledges",
-        "Projects": "Projects",
-        "Contact": "Contact" 
+        "projects": "Projects",
+        "contact": "Contact" 
     }
 }

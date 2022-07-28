@@ -17,8 +17,9 @@
                 <li class="main-menu__item" v-for="item in listaObjetos" :key="item.id">
                     <a :href="item.href" class="main-menu__link"  rel="nofollow noopener noreferrer"
                     data-test-id="main-menu-test"
-                    :data-section="item.dataProfile"
-                    :data-value="item.dataValue">{{item.name}}</a>
+                    :data-section="item.dataProfile" :data-value="item.dataValue">
+                        {{item.name}}
+                    </a>
                 </li>
             </ul>
             <div class="menu-footer" id="flags">

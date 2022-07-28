@@ -44,11 +44,11 @@
         border-top: 1px solid $primary-color;
 
         @include laptop{
+            display: flex;
             margin-top: 0;
-            min-width: 10%;
+            min-width: auto;
             height: 100%;
             border-top: 0px transparent;
-            // max-width: auto;
         }
 
         &__text{
@@ -181,11 +181,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
     margin-top: 1em;
 
     @include laptop{
         margin-top: 0;
+        width: 80px;
         height: 100%;
         justify-content: flex-start;
     }
@@ -194,7 +194,7 @@
         max-width: 10%;
 
         @include laptop{
-            max-width: 20%;
+            max-width: 50%;
         }
     }
 }

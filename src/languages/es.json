@@ -2,10 +2,10 @@
     "nav": {
         "about": "Sobre Mi",
         "knowledge": "Conocimientos",
-        "Projects": "Proyectos",
-        "Contact": "Contacto" 
+        "projects": "Proyectos",
+        "contact": "Contacto" 
     },
     "main": {
-        
+
     }
 }
