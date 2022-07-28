@@ -16,12 +16,16 @@
             <ul class="main-menu" v-if="listaObjetos.length > 0">
                 <li class="main-menu__item" v-for="item in listaObjetos" :key="item.id">
                     <a :href="item.href" class="main-menu__link"  rel="nofollow noopener noreferrer"
-                    data-test-id="main-menu-test">{{item.name}}</a>
+                    data-test-id="main-menu-test"
+                    :data-section="item.dataProfile"
+                    :data-value="item.dataValue">{{item.name}}</a>
                 </li>
             </ul>
-            <div class="menu-footer">
-                <div class="languages">
+            <div class="menu-footer" id="flags">
+                <div class="languages" data-language="es">
                     <img src="../assets/flags/es.svg" alt="spanish flag" class="languages__flags">
+                </div>
+                <div class="languages" data-language="en">
                     <img src="../assets/flags/en.svg" alt="america flag" class="languages__flags">
                 </div>
                 <p class="menu-footer__text" data-test-id="menu-footer-test">Felix Sandoval Portfolio</p>
@@ -39,22 +43,30 @@ export default {
             {
                 id: 1,
                 name: 'Sobre mi',
-                href: '#about'
+                href: '#about',
+                dataProfile: 'nav',
+                dataValue: 'about'
             },
             {
                 id: 2,
                 name: 'Conocimientos',
-                href: '#conocimientos'
+                href: '#conocimientos',
+                dataProfile: 'nav',
+                dataValue: 'knowledge'
             },
             {
                 id: 3,
                 name: 'Proyectos',
-                href: '#proyectos'
+                href: '#proyectos',
+                dataProfile: 'nav',
+                dataValue: 'projects'
             },
             {
                 id: 4,
                 name: 'Contacto',
-                href: '#contacto'
+                href: '#contacto',
+                dataProfile: 'nav',
+                dataValue: 'contact'
             }
             ],
             listItem:[
