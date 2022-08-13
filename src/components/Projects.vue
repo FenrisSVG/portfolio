@@ -21,7 +21,8 @@
                             {{item.title}}</a>
                         </p>
                     </div>
-                    <div class="projects-article__techno" v-if="item.isIcon">
+                    <div class="projects-article__techno" v-if="item.isIcon
+                    && item.icons.thirdIcons">
                         <div class="projects-article__devs">
                             <i :class="item.icons.html"></i>
                             <p class="projects-article__devs-text">
@@ -35,7 +36,8 @@
                             </p>
                         </div>
                     </div>
-                    <div class="projects-article__techno projects-article__techno--secondary" v-else>
+                    <div class="projects-article__techno projects-article__techno--secondary"
+                    v-else-if="!item.isIcon">
                         <div class="projects-article__devs projects-article__devs--secondary">
                             <img :src="item.icons.srcTailwind" alt="utility framework tailwind logo" loading="lazy" :class="item.icons.classImage">
                             <i :class="item.icons.sass"></i>
@@ -51,6 +53,27 @@
                         </div>
                         <div class="projects-article__devs projects-article__devs--secondary">
                             <img :src="item.icons.srcVite" alt="utility framework tailwind logo" loading="lazy" class="projects-article__devs-image">
+                            <p class="projects-article__devs-text">
+                                {{item.icons.name3}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="projects-article__techno"
+                    v-else-if="!item.icons.thirdIcons">
+                        <div class="projects-article__devs">
+                            <i :class="item.icons.html"></i>
+                            <p class="projects-article__devs-text">
+                                {{item.icons.name}}
+                            </p>
+                        </div>
+                        <div class="projects-article__devs">
+                            <i :class="item.icons.css"></i>
+                            <p class="projects-article__devs-text">
+                                {{item.icons.name2}}
+                            </p>
+                        </div>
+                        <div class="projects-article__devs">
+                            <i :class="item.icons.js"></i>
                             <p class="projects-article__devs-text">
                                 {{item.icons.name3}}
                             </p>
@@ -92,7 +115,8 @@ export default {
                     html: 'fab fa-html5 projects-article__devs-icon',
                     name: 'HTML',
                     css: 'fab fa-css3-alt projects-article__devs-icon',
-                    name2: 'CSS'
+                    name2: 'CSS',
+                    thirdIcons: true
                 },
                 description: 'Frontend Mentor - Loopstudios landing page',
                 year: 2021,
@@ -137,6 +161,25 @@ export default {
                 year: 2022,
                 github: 'https://github.com/FenrisSVG?tab=repositories',
                 isIcon: false
+            },
+            {
+                id: 4,
+                image: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto,w_700/Challenges/xhxtaym7uzypzb37rpcc.jpg',
+                href: 'https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt',
+                title: 'Extenses Chart Component',
+                icons:{
+                    html: 'fa-brands fa-html5 projects-article__devs-icon',
+                    name: 'HTML',
+                    css: 'fab fa-css3-alt projects-article__devs-icon',
+                    name2: 'CSS',
+                    js: 'fa-brands fa-js projects-article__devs-icon',
+                    name3: 'JS',
+                    thirdIcons: false
+                },
+                description: 'proyecto de universidad',
+                year: 2022,
+                github: 'https://github.com/FenrisSVG?tab=repositories',
+                isIcon: true
             }
             ]
         }

@@ -200,7 +200,7 @@
 .card--five,
 .card--six{
     @include laptop{
-        min-width: 48.95%;
+        min-width: 48%;
         flex-direction: row;
         display: grid;
         grid-template-columns: repeat(2,minmax(min-content,fit-content));
