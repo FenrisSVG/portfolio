@@ -95,8 +95,8 @@
                 <p class="card-header__title"><span>Testing</span></p>
                 <header class="card-header">
                     <div class="card-header__techno">
-                        <img src="../assets/icons/cypress.png" class="card-header__image"
-                            alt="cypress test icon" loading="lazy">
+                        <!-- <img src="../assets/icons/cypress.png" class="card-header__image"
+                            alt="cypress test icon" loading="lazy"> -->
                     </div>
                     <p class="card-header__text">Cypress</p>
                 </header>
