@@ -120,7 +120,7 @@ export default {
                 id: 1,
                 image: 'https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_475/Challenges/f00lkcojzyklnglc3ffr.jpg',
                 href: 'https://www.frontendmentor.io/challenges/loopstudios-landing-page-N88J5Onjw',
-                title: 'Loopstudios langind page',
+                title: 'Loopstudios langind page.',
                 icons:{
                     html: 'fab fa-html5 projects-article__devs-icon',
                     name: 'HTML',
@@ -128,7 +128,7 @@ export default {
                     name2: 'CSS',
                     thirdIcons: true
                 },
-                description: 'Frontend Mentor - Loopstudios landing page',
+                description: 'Frontend Mentor - Loopstudios landing page.',
                 year: 2021,
                 github: 'https://github.com/FenrisSVG?tab=repositories',
                 isIcon: true
@@ -157,7 +157,7 @@ export default {
                 id: 3,
                 image: 'src/assets/images/trastornos.png',
                 href: 'https://trastorno-website.vercel.app/',
-                title: 'Webpage about disorder mental',
+                title: 'Webpage about disorder mental.',
                 icons:{
                     vuejs: 'fab fa-vuejs projects-article__devs-icon',
                     name: 'VueJS',
@@ -178,7 +178,7 @@ export default {
                 id: 4,
                 image: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto,w_700/Challenges/xhxtaym7uzypzb37rpcc.jpg',
                 href: 'https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt',
-                title: 'Extenses Chart Component',
+                title: 'Extenses Chart Component.',
                 icons:{
                     html: 'fa-brands fa-html5 projects-article__devs-icon',
                     name: 'HTML',
@@ -197,7 +197,7 @@ export default {
                 id: 5,
                 image: 'src/assets/images/rachael.png',
                 href: 'https://rachael.vercel.app/',
-                title: 'Rachael',
+                title: 'Rachael.',
                 icons:{
                     vuejs: 'fab fa-vuejs projects-article__devs-icon',
                     name: 'VueJS',
