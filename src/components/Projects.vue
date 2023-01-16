@@ -1,7 +1,7 @@
 <template>
     <section class="projects-section" id="proyectos">
         <div class="projects-section__text">
-            <h2 class="projects-title"><span class="about-title--color">03.</span> Proyectos que he construido</h2>
+            <h2 class="projects-title"><span class="about-title--color">03.</span> Proyectos que he construido 🎉</h2>
             <p class="projects-text">Lista de páginas que he construido no oficiales si como practicas
                 de 
                 <span>
@@ -57,6 +57,12 @@
                                 {{item.icons.name3}}
                             </p>
                         </div>
+                        <div class="projects-article__devs projects-article__devs--secondary">
+                            <img :src="item.icons.srcVite" alt="utility framework tailwind logo" loading="lazy" class="projects-article__devs-image">
+                            <p class="projects-article__devs-text">
+                                {{item.icons.name4}}
+                            </p>
+                        </div>
                     </div>
                     <div class="projects-article__techno"
                     v-else-if="!item.icons.thirdIcons">
@@ -92,6 +98,10 @@
                     <a :href="item.github" target="_blank" rel="noopener noreferrer nofollow"
                     class="projects-article__footer-link">
                     <i class="fab fa-github"></i></a>
+                    <a v-if="item.host"
+                     :href="item.vercel" target="_blank" rel="noopener noreferrer nofollow"
+                    class="projects-article__footer-link">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </footer>
             </section>
         </article>
@@ -108,7 +118,7 @@ export default {
             projects:[
             {
                 id: 1,
-                image: 'src/assets/images/landing-page.webp',
+                image: 'https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_475/Challenges/f00lkcojzyklnglc3ffr.jpg',
                 href: 'https://www.frontendmentor.io/challenges/loopstudios-landing-page-N88J5Onjw',
                 title: 'Loopstudios langind page',
                 icons:{
@@ -125,7 +135,7 @@ export default {
             },
             {
                 id: 2,
-                image: 'src/assets/images/chat-app.jpg',
+                image: 'https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_475/Challenges/xi4n6u5jtftsy9sbukd1.jpg',
                 href: 'https://www.frontendmentor.io/challenges/chat-app-css-illustration-O5auMkFqY',
                 title: 'Chat app CSS illustration',
                 icons:{
@@ -145,8 +155,8 @@ export default {
             },
             {
                 id: 3,
-                image: 'src/assets/images/chat-app.jpg',
-                href: 'https://www.frontendmentor.io/challenges/chat-app-css-illustration-O5auMkFqY',
+                image: 'src/assets/images/trastornos.png',
+                href: 'https://trastorno-website.vercel.app/',
                 title: 'Webpage about disorder mental',
                 icons:{
                     vuejs: 'fab fa-vuejs projects-article__devs-icon',
@@ -159,8 +169,10 @@ export default {
                 },
                 description: 'proyecto de universidad',
                 year: 2022,
-                github: 'https://github.com/FenrisSVG?tab=repositories',
-                isIcon: false
+                github: 'https://github.com/FenrisSVG/trastorno-website',
+                isIcon: false,
+                host: true,
+                vercel: 'https://trastorno-website.vercel.app/'
             },
             {
                 id: 4,
@@ -176,10 +188,33 @@ export default {
                     name3: 'JS',
                     thirdIcons: false
                 },
+                description: 'Frontend - Mentor Extenses Chart Component',
+                year: 2022,
+                github: 'https://github.com/FenrisSVG/frontendMentor-expenses-chart-component',
+                isIcon: true
+            },
+            {
+                id: 5,
+                image: 'src/assets/images/rachael.png',
+                href: 'https://rachael.vercel.app/',
+                title: 'Rachael',
+                icons:{
+                    vuejs: 'fab fa-vuejs projects-article__devs-icon',
+                    name: 'VueJS',
+                    sass: 'fab fa-sass projects-article__devs-icon',
+                    name2: 'Sass',
+                    srcVite: 'src/assets/icons/babel-64x64.png',
+                    name3: 'Python',
+                    classImage: 'projects-article__devs-image projects-article__devs-image--tailwind',
+                    name4: 'PHP',
+                    phpImage: 'projects-article__devs-image projects-article__devs-image--tailwind'
+                },
                 description: 'proyecto de universidad',
                 year: 2022,
-                github: 'https://github.com/FenrisSVG?tab=repositories',
-                isIcon: true
+                github: 'https://github.com/FenrisSVG/rachael',
+                isIcon: false,
+                host: true,
+                vercel: 'https://rachael.vercel.app/'
             }
             ]
         }

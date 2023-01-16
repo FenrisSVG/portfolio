@@ -78,21 +78,6 @@
                 overflow: hidden;
             }
 
-            &::before{
-                @include laptop{
-                    position: absolute;
-                    content: '';
-                    display: block;
-                    top: 0;
-                    left: 0;
-                    border-right: 200px solid mediumpurple;
-                    border-bottom: 150px solid transparent;
-                    border-top: 0 solid transparent;
-                    border-left: 0 solid transparent;
-                    transform: translate(-110%,50%);
-                    z-index: -1;
-                }
-            }
         }
     }
 }
@@ -208,7 +193,7 @@
 
     .section-footer__link:hover::before{
         transform: translate(0,0);
-        transition: all .5s ease-in;
+        transition: all .8s ease-in;
     }
 
     .section-footer__link:hover{
@@ -219,6 +204,10 @@
 @media(prefers-reduced-motion){
     .socials-icons:hover{
         animation: scaleIcon linear infinite 4s alternate;
+    }
+
+    .section-footer__link:hover::before{
+        transition: all 2s ease-out;
     }
 }
 

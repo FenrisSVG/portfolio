@@ -19,7 +19,7 @@
                 </p>
             </div>
             <footer class="section-footer">
-                <a href="mailto:fsandovalchavez3@gmail.com"
+                <a href="mailto:felix.sandoval171@outlook.com"
                 rel="nofollow noopener noreferrer"
                 class="section-footer__link" data-test-id="contact-me-test">Contáctame</a>
             </footer>
