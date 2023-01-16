@@ -13,15 +13,19 @@
                 <!-- CARD DEL HTML -->
                 <p class="card-header__title"><span>Estructurar</span> la Página</p>
                 <header class="card-header">
-                    <div class="card-header__techno">
+                    <div class="card-header__techno card-header__techno--design">
                         <i class="fab fa-html5 card-header__icon"></i>
+                        <i class="devicon-figma-plain card-header__icon"></i>
                     </div>
-                    <p class="card-header__text">HTML5</p>
+                    <div class="card-header__techno--text">
+                        <p class="card-header__text">HTML5</p>
+                        <p class="card-header__text">FIGMA</p>
+                    </div>
                 </header>
             </div>
             <!-- CARD BRING FOR JAVASCRIPT FOR CSS AND JS -->
             <div :class="item.class" v-for="item in technos" :key="item.id">
-                <p :class="item.titleClass" :data-value="item.title"></p>
+                <p :class="item.titleClass" :data-value="item.title">{{item.title}}</p>
                 <header class="card-header card-header--flex">
                     <div class="card-header__techno">
                         <div>
@@ -40,12 +44,18 @@
                 <footer class="card-footer">
                     <div class="card-footer__frameworks">
                         <h4 class="card-footer__title">{{item.frameworkTitle}}</h4>
-                        <div class="card-header__techno">
+                        <div class="card-header__techno card-header__techno--flex">
                             <i v-if="item.isIcon" :class="item.iconFramework"></i>
                             <img v-else src="../assets/icons/tailwind-64x64.png" loading="lazy"
                             alt="css framework tailwind icon" class="card-header__image">
+                            <img v-if="item.secondFramework" loading="lazy" class="card-header__image--astro"
+                            src="../assets/icons/astro.png" alt="astro framework vercel icon">
                         </div>
-                        <p class="card-header__text">{{item.framework}}</p>
+                        <div class="card-header__techno--front">
+                            <p class="card-header__text">{{item.framework}}</p>
+                            <p v-if="item.secondFramework"
+                            class="card-header__text">Astro.</p>
+                        </div>
                     </div>
                     <div class="card-footer__pre">
                         <h4 class="card-footer__title">{{item.preTitle}}</h4>
@@ -104,6 +114,28 @@
     </section>
 </template>
 
+<style scoped>
+.card-header__techno--flex,
+.card-header__techno--design{
+    display: flex;  
+    justify-content: center;
+    gap: 15px;
+}
+
+.card-header__image--astro{
+    width: 44px;
+    height: 44px;
+}
+
+.card-header__techno--front,
+.card-header__techno--text{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 5px;
+}
+</style>
+
 <script>
 export default {
     name: 'Conocimientos',
@@ -123,7 +155,8 @@ export default {
                 preProcesador: 'Sass',
                 isIcon: false,
                 class: 'card card--five',
-                titleClass: 'card-header__title card-header__title--flex'
+                titleClass: 'card-header__title card-header__title--flex',
+                secondFramework: false
             },
             {
                 id: 2,
@@ -133,13 +166,15 @@ export default {
                 frameworkTitle: 'Frameworks',
                 iconFramework: 'fab fa-vuejs card-header__icon',
                 framework: 'VueJS',
+                framework2: 'Astro',
                 preTitle: 'Transpilador',
                 iconPre: 'fab fa-sass card-header__icon',
                 preProcesador: 'Babel',
                 isIcon: true,
                 class: 'card card--six',
                 titleClass: 'card-header__title card-header__title--flex',
-                typescript: [false, true]
+                typescript: [false, true],
+                secondFramework: true
             }],
             copyTechnos: [],
         }
