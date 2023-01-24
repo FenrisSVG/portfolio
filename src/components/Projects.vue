@@ -57,12 +57,6 @@
                                 {{item.icons.name3}}
                             </p>
                         </div>
-                        <div class="projects-article__devs projects-article__devs--secondary">
-                            <img :src="item.icons.srcVite" alt="utility framework tailwind logo" loading="lazy" class="projects-article__devs-image">
-                            <p class="projects-article__devs-text">
-                                {{item.icons.name4}}
-                            </p>
-                        </div>
                     </div>
                     <div class="projects-article__techno"
                     v-else-if="!item.icons.thirdIcons">
@@ -206,8 +200,6 @@ export default {
                     srcVite: 'src/assets/icons/babel-64x64.png',
                     name3: 'Python',
                     classImage: 'projects-article__devs-image projects-article__devs-image--tailwind',
-                    name4: 'PHP',
-                    phpImage: 'projects-article__devs-image projects-article__devs-image--tailwind'
                 },
                 description: 'proyecto de universidad',
                 year: 2022,

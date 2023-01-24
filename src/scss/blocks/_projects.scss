@@ -33,7 +33,7 @@
     @include laptop{
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 30px;
+        gap: 22px;
     }
 
     &__card{
@@ -47,8 +47,8 @@
         max-width: 500px;
 
         @include laptop{
-            max-width: 390px;
-            padding-bottom: 16px;
+            max-width: 360px;
+            padding-bottom: 12px;
         }
     }
     
@@ -163,7 +163,7 @@
 
         &-link{
             margin-right: .3em;
-            font-size: 2rem;
+            font-size: 1.8rem;
         }
     }
 }
