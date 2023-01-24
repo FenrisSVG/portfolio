@@ -2,8 +2,7 @@
     <!-- ESTRUCTURA DE LOS CONOCIMIENTOS -->
     <section class="conocimientos-section" id="conocimientos"
     data-test-id="conocimientos-section-test">
-        <h2 class="conocimientos-title"><span class="about-title--color">02.</span> Conocimientos
-        <sub>(Front-End)</sub> 💻</h2>
+        <Title list="02." title="Herramientas Técnologicas. 💻" />
         <article class="conocimientos-article">
             <h3 class="conocimientos-article__text">A continuación se mostrará una lista de las <span>tecnologias</span> en las que
                 tengo conocimiento y estoy <span>listo a afrontar</span>,
@@ -105,7 +104,8 @@
                 <p class="card-header__title"><span>Testing</span></p>
                 <header class="card-header">
                     <div class="card-header__techno">
-                        
+                        <img src="../assets/icons/cypress.png" class="card-header__image"
+                            alt="cypress testing icon" loading="lazy">
                     </div>
                     <p class="card-header__text">Cypress</p>
                 </header>
@@ -137,8 +137,13 @@
 </style>
 
 <script>
+import Title from './Layout/Title.vue'
+
 export default {
     name: 'Conocimientos',
+    components:{
+        Title
+    },
     data(){
         return{
             isIcon: false,

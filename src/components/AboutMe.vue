@@ -1,6 +1,6 @@
 <template>
     <section class="about-section" id="about" data-test-id="about-test">
-        <h2 class="about-title"><span class="about-title--color">01.</span> Sobre Mi 🔎</h2>
+        <Title list="01." title="Sobre Mi. 🔎" />
         <article class="about-article">
             <div class="about-article__header">
                 <p class="about-article__text">Estudiante de 
@@ -25,9 +25,13 @@
 
 <script>
 import scrollReveal from 'scrollreveal'
+import Title from './Layout/Title.vue'
 
 export default {
     name: 'AboutMe',
+    components:{
+        Title
+    },
     methods:{
         scrollReveal(){
             scrollReveal().reveal('.about-section',{delay: 300, reset: true})

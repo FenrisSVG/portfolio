@@ -1,7 +1,7 @@
 <template>
     <section class="projects-section" id="proyectos">
         <div class="projects-section__text">
-            <h2 class="projects-title"><span class="about-title--color">03.</span> Proyectos que he construido 🎉</h2>
+            <Title list="03." title="Proyectos que he construido 🎉" />
             <p class="projects-text">Lista de páginas que he construido no oficiales si como practicas
                 de 
                 <span>
@@ -104,9 +104,13 @@
 
 <script>
 //import StarRating from 'vue-star-rating'
+import Title from './Layout/Title.vue'
 
 export default {
     name: 'Projects',
+    components:{
+        Title
+    },
     data(){
         return{
             projects:[
