@@ -3,25 +3,17 @@
     <section class="conocimientos-section" id="conocimientos"
     data-test-id="conocimientos-section-test">
         <Title list="02." title="Herramientas Técnologicas. 💻" />
+        <!-- CARD OF MY KNOWLEDGES -->
         <article class="conocimientos-article">
             <h3 class="conocimientos-article__text">A continuación se mostrará una lista de las <span>tecnologias</span> en las que
                 tengo conocimiento y estoy <span>listo a afrontar</span>,
             </h3>
-            <!-- CARD OF MY KNOWLEDGES -->
-            <div class="card card--one">
-                <!-- CARD DEL HTML -->
-                <p class="card-header__title"><span>Estructurar</span> la Página</p>
-                <header class="card-header">
-                    <div class="card-header__techno card-header__techno--design">
-                        <i class="fab fa-html5 card-header__icon"></i>
-                        <i class="devicon-figma-plain card-header__icon"></i>
-                    </div>
-                    <div class="card-header__techno--text">
-                        <p class="card-header__text">HTML5</p>
-                        <p class="card-header__text">FIGMA</p>
-                    </div>
-                </header>
-            </div>
+            <!-- CARD DEL HTML -->
+            <Technos className="card card--one" 
+                title="Estructurar"
+                spanTitle="la Página."
+                :isIcon="false"
+                :hasOneTechno="false" />
             <!-- CARD BRING FOR JAVASCRIPT FOR CSS AND JS -->
             <div :class="item.class" v-for="item in technos" :key="item.id">
                 <p :class="item.titleClass" :data-value="item.title">{{item.title}}</p>
@@ -67,82 +59,52 @@
                     </div>
                 </footer>
             </div>
-                <!-- CARD DE GIT-->
-            <div class="card card--two">
-                <p class="card-header__title"><span>Controlador</span> versiones</p>
-                <header class="card-header">
-                    <div class="card-header__techno">
-                        <i class="fab fa-git-alt card-header__icon"></i>
-                    </div>
-                    <p class="card-header__text">GIT</p>
-                </header>
-            </div>
-                <!-- CARD DE VITE-->
-            <div class="card card--three">
-                <p class="card-header__title"><span>Empaquetar</span> proyecto</p>
-                <header class="card-header">
-                    <div class="card-header__techno">
-                        <img src="../assets/icons/vite-64x64.png" class="card-header__image"
-                            alt="package vite icon" loading="lazy">
-                    </div>
-                    <p class="card-header__text">VITE</p>
-                </header>
-            </div>
+            <!-- CARD DE GIT-->
+            <Technos className="card card--two" 
+                title="Controlador"
+                spanTitle="Versiones."
+                techno="GIT."
+                :isIcon="true"
+                :hasOneTechno="true" />
+            <!-- CARD DE VITE-->
+            <Technos className="card card--three" 
+                title="Empaquetar"
+                spanTitle="proyectos."
+                image="vite-64x64.png" 
+                alt="package folder vite icon" 
+                techno="VITE"
+                :isIcon="false"
+                :hasOneTechno="true" />
             <!-- CARD DE SQL-->
-            <div class="card card--four">
-                <p class="card-header__title">Bases de <span>Datos</span></p>
-                <header class="card-header">
-                    <div class="card-header__techno">
-                        <img src="../assets/icons/MySQL-64x64.png" class="card-header__image"
-                            alt="mysql database icon" loading="lazy">
-                    </div>
-                    <p class="card-header__text">MySQL</p>
-                </header>
-            </div>
+            <Technos className="card card--four" 
+                    title="Bases de "
+                    spanTitle="Datos."
+                    image="MySQL-64x64.png" 
+                    alt="mysql database icon" 
+                    techno="MySQL"
+                    :isIcon="false"
+                    :hasOneTechno="true" />
             <!-- CARD DE CYPRESS-->
-            <div class="card card--seven">
-                <p class="card-header__title"><span>Testing</span></p>
-                <header class="card-header">
-                    <div class="card-header__techno">
-                        <img src="../assets/icons/cypress.png" class="card-header__image"
-                            alt="cypress testing icon" loading="lazy">
-                    </div>
-                    <p class="card-header__text">Cypress</p>
-                </header>
-            </div>
+            <Technos className="card card--seven" 
+                    spanTitle="Testing"
+                    image="cypress.png" 
+                    alt="cypress testing icon" 
+                    techno="Cypress"
+                    :isIcon="false"
+                    :hasOneTechno="true" />
         </article>
     </section>
 </template>
 
-<style scoped>
-.card-header__techno--flex,
-.card-header__techno--design{
-    display: flex;  
-    justify-content: center;
-    gap: 15px;
-}
-
-.card-header__image--astro{
-    width: 44px;
-    height: 44px;
-}
-
-.card-header__techno--front,
-.card-header__techno--text{
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 5px;
-}
-</style>
-
 <script>
 import Title from './Layout/Title.vue'
+import Technos from './Layout/Technos.vue'
 
 export default {
     name: 'Conocimientos',
     components:{
-        Title
+        Title,
+        Technos
     },
     data(){
         return{
