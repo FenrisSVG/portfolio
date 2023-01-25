@@ -142,7 +142,7 @@ export default {
                     srcTailwind: 'src/assets/icons/tailwind-64x64.png',
                     sass: 'fab fa-sass projects-article__devs-icon projects-article__devs-icon--sass',
                     name2: 'Tailwind',
-                    srcVite: 'src/assets/icons/vite-64x64.png',
+                    srcVite: '../assets/icons/vite-64x64.png',
                     name3: 'Vite',
                     classImage: 'projects-article__devs-image'
                 },
@@ -161,7 +161,7 @@ export default {
                     name: 'VueJS',
                     sass: 'fab fa-sass projects-article__devs-icon',
                     name2: 'Sass',
-                    srcVite: 'src/assets/icons/babel-64x64.png',
+                    srcVite: '../assets/icons/babel-64x64.png',
                     name3: 'Babel',
                     classImage: 'projects-article__devs-image projects-article__devs-image--tailwind'
                 },
@@ -193,7 +193,7 @@ export default {
             },
             {
                 id: 5,
-                image: 'src/assets/images/rachael.png',
+                image: '../assets/images/rachael.png',
                 href: 'https://rachael.vercel.app/',
                 title: 'Rachael.',
                 icons:{
@@ -201,7 +201,7 @@ export default {
                     name: 'VueJS',
                     sass: 'fab fa-sass projects-article__devs-icon',
                     name2: 'Sass',
-                    srcVite: 'src/assets/icons/babel-64x64.png',
+                    srcVite: 'https://portfolio-fenrissvg.vercel.app/assets/icons/vite-64x64.png',
                     name3: 'Python',
                     classImage: 'projects-article__devs-image projects-article__devs-image--tailwind',
                 },

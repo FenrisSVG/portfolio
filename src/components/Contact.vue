@@ -27,9 +27,9 @@
                 <div class="contact-form__group">
                     <label for="message" class="contact-form__label">
                         MENSAJE.
-                        <textarea name="message" cols="30" rows="5"
+                        <textarea name="message" cols="30" rows="4"
                         class="contact-form__textarea" placeholder="Escriba un mensaje." required
-                        maxlength="500"></textarea>
+                        maxlength="250"></textarea>
                     </label>
                 </div>
                 <div class="contact-form__group">

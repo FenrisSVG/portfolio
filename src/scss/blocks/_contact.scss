@@ -80,10 +80,11 @@
     }
 
     &__textarea{
-
+        resize: none;
+        
        @include laptop{
         padding: 10px;
-         font-size: 1rem;
+        font-size: 1rem;
        }
     }
 
