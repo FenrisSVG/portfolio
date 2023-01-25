@@ -9,10 +9,8 @@
     flex-direction: column-reverse;
 
     @include laptop{
-        position: relative;
-        padding: 0 6em;
-        border: 1px solid red;
         flex-direction: row;
+        padding: 0 6em;
     }
 }
 
@@ -24,9 +22,9 @@
     background-color: #ccc;
 
     @include laptop{
-        padding: 1.4rem 5rem 0 3rem;
+        padding: 1.4rem 5rem 1rem 3rem;
         flex: 1 1 0;
-        border-radius: 0 10px 10px 0;
+        border-radius: 0 7px 7px 0;
     }
 
     &__group{
@@ -88,6 +86,15 @@
          font-size: 1rem;
        }
     }
+
+    &__button{
+        width: 120px;
+        height: 40px;
+        border: none;
+        border-radius: 7px;
+        color: #fff;
+        background-color: $secondary-color;
+    }
 }
 
 // Esta parte es la información de mi perfil que lleva color de bg
@@ -97,7 +104,7 @@
     background-color: #5CCE93;
 
     @include laptop{
-        // position: absolute;
+        position: relative;
         padding: 1.4rem 4rem 4rem;
         border-radius: 10px 0 0 10px;
     }
@@ -169,10 +176,41 @@
             color: #c99806;
         }
     }
+
+    &::after,
+    &::before{
+        @include laptop{
+            position: absolute;
+            content: '';
+            display: block;
+            width: 100%;
+            height: 30px;
+            border-radius: 5px;
+            background-color: #5CCE93;
+        }
+    }
+
+    &::after{
+        @include laptop{
+            bottom: -10px;
+            left: 0;
+        }
+    }
+
+    &::before{
+        @include laptop{
+            top: -10px;
+            left: 0;
+        }
+    }
 }
 
 @media(Hover:hover){
     .contact-form__group:hover i{
         color: #E4F9F6;
+    }
+
+    .contact-form__button:hover{
+        cursor: pointer;
     }
 }

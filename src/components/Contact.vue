@@ -14,7 +14,7 @@
                     </div>
                 </footer>
             </div>
-            <form class="contact-form" action="" method="POST" autocomplete="off"
+            <form class="contact-form" action="https://formsubmit.co/fsandovalchavez3@gmail.com" method="POST" autocomplete="off"
                 v-if="inputs.length > 0">
                 <h3 class="contact-info__title contact-info__title--two">Pongamonos en contacto.</h3>
                 <div class="contact-form__group" v-for="item in inputs" :key="item.id">
@@ -31,6 +31,9 @@
                         class="contact-form__textarea" placeholder="Escriba un mensaje." required
                         maxlength="500"></textarea>
                     </label>
+                </div>
+                <div class="contact-form__group">
+                    <button type="submit" class="contact-form__button">Send Message.</button>
                 </div>
             </form>
         </div>
@@ -65,12 +68,12 @@ export default{
                     text: 'Email: ',
                     information: 'fsandovalchavez3@gmail.com'
                 },
-                // {
-                //     id: 4,
-                //     icon: '',
-                //     text: 'Website: ',
-                //     information: '8355-4265 (Claro)'
-                // }
+                {
+                    id: 4,
+                    icon: 'fa-brands fa-linkedin contact-info__icon',
+                    text: 'Github: ',
+                    information: 'FenrisSVG'
+                }
             ],
             inputs: [
                 {
