@@ -2,7 +2,7 @@
     <!-- ESTRUCTURA DE LOS CONOCIMIENTOS -->
     <section class="conocimientos-section" id="conocimientos"
     data-test-id="conocimientos-section-test">
-        <Title list="02." title="Herramientas Técnologicas. 💻" />
+        <Title list="02." title="Herramientas Técnologicas. 💻" name="title-two" />
         <!-- CARD OF MY KNOWLEDGES -->
         <article class="conocimientos-article">
             <h3 class="conocimientos-article__text">A continuación se mostrará una lista de las <span>tecnologias</span> en las que

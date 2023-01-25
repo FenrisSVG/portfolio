@@ -5,7 +5,8 @@ import Main from './Main.vue'
 export default {
   name: 'Index',
   components:{
-    Nav,Main
+    Nav,
+    Main
   },
   data(){
         return{
@@ -25,7 +26,8 @@ export default {
             },
             {
                 id: 4,
-                class: 'fab fa-telegram socials-icons__networks'
+                class: 'fa-brands fa-linkedin socials-icons__networks',
+                href: 'https://www.linkedin.com/in/felixarturosandoval/'
             }]
         }
     }

@@ -6,6 +6,14 @@
         "contact": "Contacto" 
     },
     "main": {
-
+        "presentation": "Hola, mi nombre es",
+        "phrase": "Si no puedo hacer grandes cosas, hago que las cosas pequeñas sean grandiosas.",
+        "introduce": "Soy estudiante 👨‍🎓 de cuarto año de la carrera Ingenieria en Sistemas cursando en la Universidad Nacional de Ingeniejria. Me interesa el área de desarollador de aplicaciones web y móvil.",
+        "button-one": "Contactame.",
+        "button-two": "Descargar CV.",
+        "title-one": "01. Sobre mi. 🔎",
+        "title-two": "02. Herramientas Tecnológicas. 💻",
+        "title-three": "03. Proyectos. 🎉",
+        "title-four": "04. Contactame. 🎉"
     }
 }

@@ -4,5 +4,15 @@
         "knowledge": "Knowledges",
         "projects": "Projects",
         "contact": "Contact" 
+    },
+    "main": {
+        "presentation": "Hello!, my name is",
+        "phrase": "If I can't do great things, I make small things great",
+        "button-one": "Contact me.",
+        "button-two": "Download CV.",
+        "title-one": "01. About me. 🔎",
+        "title-two": "02. Technologicals tools. 💻",
+        "title-three": "03. Projects. 🎉",
+        "title-four": "04. Contact me. 🎉"
     }
 }

@@ -1,5 +1,5 @@
 <template>
-    <h2 class="about-title"><span class="about-title--color">{{list}}</span> {{title}}</h2>
+    <h2 class="about-title" data-section="main" :data-value="name"><span class="about-title--color">{{list}}</span> {{title}}</h2>
 </template>
 
 <script>
@@ -14,7 +14,8 @@ export default{
             type: String,
             default: 'Title not defined.',
             required: true
-        }
+        },
+        name: String
     }
 }
 </script>

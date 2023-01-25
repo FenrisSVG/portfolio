@@ -1,0 +1,178 @@
+.contact-section{
+    @include laptop{
+        padding: 0 8em 2em;
+    }
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include laptop{
+        position: relative;
+        padding: 0 6em;
+        border: 1px solid red;
+        flex-direction: row;
+    }
+}
+
+// Parte del formulario porterior a integrar form submit
+
+.contact-form{
+    padding: 30px 15px 0;
+    border-radius: 10px 10px 0 0;
+    background-color: #ccc;
+
+    @include laptop{
+        padding: 1.4rem 5rem 0 3rem;
+        flex: 1 1 0;
+        border-radius: 0 10px 10px 0;
+    }
+
+    &__group{
+        position: relative;
+    }
+    
+    & i{
+        position: absolute;
+        bottom: 16px;
+        left: 15px;
+        font-size: 1.3rem;
+        color: $secondary-color;
+        
+        @include laptop{
+            font-size: 1.2rem;
+            transition: all .3s ease-out;
+        }
+    }
+
+    &__label{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+
+        @include laptop{
+            gap: 15px;
+            font-size: 14px;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__input,
+    &__textarea{
+        border-radius: 4px;
+        outline: none;
+        border: 1px solid $secondary-color;
+        transition: outline .1s ease-in;
+        
+        &:focus{
+            outline: 1px solid #c99806;
+            outline-offset: 3px;
+        }
+    }
+
+    &__input{
+        padding: 15px 10px 15px 50px;
+
+        @include laptop{
+            font-size: 15px;
+        }
+    }
+
+    &__textarea{
+
+       @include laptop{
+        padding: 10px;
+         font-size: 1rem;
+       }
+    }
+}
+
+// Esta parte es la información de mi perfil que lleva color de bg
+.contact-info{
+    padding: 0 16px;
+    border-radius: 0 0 10px 10px;
+    background-color: #5CCE93;
+
+    @include laptop{
+        // position: absolute;
+        padding: 1.4rem 4rem 4rem;
+        border-radius: 10px 0 0 10px;
+    }
+
+    &__title{
+        color: $title-color;
+        margin-bottom: 0;
+        font-size: 1.5rem;
+
+        @include laptop{
+            font-size: 1.8rem;
+        }
+
+        &--two{
+            @include laptop{
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+
+    &__text,
+    &__description{
+        font-size: 1.1rem;
+
+        @include laptop{
+            font-size: 1rem;
+        }
+    }
+
+    &__text{
+        margin-top: 10px;
+        margin-bottom: 1rem;
+
+        @include laptop{
+            margin-top: 1.5rem;
+        }
+    }
+
+    &__icon{
+        color: #fff;
+        font-size: 1.8rem;
+
+        @include laptop{
+            display: grid;
+            place-items: center;
+            width: 40px;
+            height: 40px;
+            font-size: 1.4rem;
+            border: 1px solid #ccc;
+            border-radius: 50px;
+        }
+    }
+
+    &__perfil{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-left: 5px;
+
+        @include laptop{
+            padding-top: 1rem;
+            gap: 20px;
+        }
+    }
+
+    &__description{
+
+        & strong{
+            color: #c99806;
+        }
+    }
+}
+
+@media(Hover:hover){
+    .contact-form__group:hover i{
+        color: #E4F9F6;
+    }
+}

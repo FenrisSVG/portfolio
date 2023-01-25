@@ -1,7 +1,7 @@
 <template>
     <section class="projects-section" id="proyectos">
         <div class="projects-section__text">
-            <Title list="03." title="Proyectos que he construido 🎉" />
+            <Title list="03." title="Proyectos que he construido 🎉" name="title-three" />
             <p class="projects-text">Lista de páginas que he construido no oficiales si como practicas
                 de 
                 <span>
