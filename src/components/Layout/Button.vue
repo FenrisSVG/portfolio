@@ -1,5 +1,5 @@
 <template>
-    <a href="mailto:felix.sandoval171@outlook.com"
+    <a :href="href"
             rel="nofollow noopener noreferrer"
             class="section-footer__link" data-test-id="contact-me-test">{{button}}
     </a>
@@ -10,6 +10,10 @@ export default {
     name: 'Button',
     props: {
         button: {
+            type: String,
+            required: true
+        },
+        href: {
             type: String,
             required: true
         }

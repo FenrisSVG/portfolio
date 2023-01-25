@@ -11,6 +11,10 @@
             <!-- CARD DEL HTML -->
             <Technos className="card card--one" 
                 title="Estructurar"
+                image=""
+                alt=""
+                techno=""
+                icon=""
                 spanTitle="la Página."
                 :isIcon="false"
                 :hasOneTechno="false" />
@@ -62,6 +66,8 @@
             <!-- CARD DE GIT-->
             <Technos className="card card--two" 
                 title="Controlador"
+                image=""
+                alt=""
                 spanTitle="Versiones."
                 techno="GIT."
                 :isIcon="true"

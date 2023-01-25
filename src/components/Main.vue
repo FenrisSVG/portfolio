@@ -19,9 +19,9 @@
                 </p>
             </div>
             <footer class="section-footer">
-                <a href="mailto:felix.sandoval171@outlook.com"
-                rel="nofollow noopener noreferrer"
-                class="section-footer__link" data-test-id="contact-me-test">Contáctame</a>
+                <Button href="mailto:felix.sandoval171@outlook.com" button="Contactame." />
+                <Button href="src/assets/pdf/CV-Felix-Sandoval.pdf" button="Descargar CV." target="_blank" 
+                download="CV-Felix-Sandoval"/>
             </footer>
         </section>
         <AboutMe/>
@@ -34,11 +34,15 @@
 import AboutMe from './AboutMe.vue'
 import Conocimientos from './Conocimientos.vue'
 import Projects from './Projects.vue'
+import Button from './Layout/Button.vue'
 
 export default {
     name: 'Main',
     components:{
-        AboutMe,Conocimientos,Projects
+        AboutMe,
+        Conocimientos,
+        Projects,
+        Button
     }
 }
 </script>

@@ -60,24 +60,29 @@
     }
 
     &-footer{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+
         @include laptop{
-        //    overflow: hidden;
+            flex-direction: row;
+            gap: 10px;
         }
         
         &__link{
             display: inline-block;
-            padding: 1em 1.5em;
-            font-size: 1.3rem;
             text-decoration: none;
+            padding: 1em;
+            width: 160px;
+            font-size: 1.3rem;
             color: $secondary-color;
-            border: 1px solid;
-
+            border: 1px solid currentColor;
+            
             @include laptop{
-                position: relative;
+                width: 170px;
                 font-size: 1.4rem;
-                overflow: hidden;
             }
-
         }
     }
 }
@@ -93,8 +98,8 @@
 .title{
     margin-top: 0;
     margin-bottom: 0;
-    width: 26ch;
-    font-size: 2.6rem;
+    width: 27ch;
+    font-size: 1.5rem;
     white-space: nowrap;
     // text-decoration: underline;
     // text-decoration-style: wavy;
@@ -196,8 +201,13 @@
         transition: all .8s ease-in;
     }
 
-    .section-footer__link:hover{
+    .section-footer__link:hover,
+    .section-footer__button:hover{
         color: #c99803;
+    }
+
+    .section-footer__button{
+        cursor: pointer;
     }
 }
 

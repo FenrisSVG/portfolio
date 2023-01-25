@@ -57,10 +57,6 @@ export default {
             type: Boolean,
             default: false
         },
-        icon: {
-            type: String,
-            required: true
-        },
         hasOneTechno: {
             type: Boolean,
             default: true
