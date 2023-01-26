@@ -105,6 +105,7 @@
 <script>
 //import StarRating from 'vue-star-rating'
 import Title from './Layout/Title.vue'
+import TrastornoImage from '../assets/images/trastornos.png'
 
 export default {
     name: 'Projects',
@@ -142,7 +143,7 @@ export default {
                     srcTailwind: 'devicon-tailwindcss-plain projects-article__devs-icon',
                     sass: 'fab fa-sass projects-article__devs-icon projects-article__devs-icon--sass',
                     name2: 'Tailwind',
-                    srcVite: 'src/assets/icons/vite-64x64.png',
+                    srcVite: '../assets/icons/vite-64x64.png',
                     name3: 'Vite',
                     classImage: 'projects-article__devs-image'
                 },
@@ -153,7 +154,7 @@ export default {
             },
             {
                 id: 3,
-                image: 'src/assets/images/trastornos.png',
+                image: TrastornoImage,
                 href: 'https://trastorno-website.vercel.app/',
                 title: 'Webpage about disorder mental.',
                 icons:{

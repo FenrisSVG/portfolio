@@ -17,7 +17,7 @@
             </div>
             <div class="about-article__footer">
                 <img data-test-id="personal-image-test"
-                src="../assets/images/felix.jpg" class="about-article__image" loading="lazy" alt="own picture felix sandoval glasses"/>
+                src="https://portfolio-fenrissvg.vercel.app/assets/felix.7c1ad7b7.jpg" class="about-article__image" loading="lazy" alt="own picture felix sandoval glasses"/>
             </div>
         </article>
     </section>
