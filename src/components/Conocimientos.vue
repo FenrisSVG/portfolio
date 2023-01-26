@@ -73,7 +73,7 @@
             <Technos className="card card--three" 
                 title="Empaquetar"
                 spanTitle="proyectos."
-                image="vite-64x64.png" 
+                :image=image 
                 alt="package folder vite icon" 
                 techno="VITE"
                 :isIcon="false"
@@ -103,6 +103,7 @@
 <script>
 import Title from './Layout/Title.vue'
 import Technos from './Layout/Technos.vue'
+import Vite from '../assets/icons/vite-64x64.png'
 
 export default {
     name: 'Conocimientos',
@@ -112,6 +113,7 @@ export default {
     },
     data(){
         return{
+            image: Vite,
             isIcon: false,
             technos:[{
                 id: 1,

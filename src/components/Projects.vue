@@ -105,7 +105,7 @@
 <script>
 //import StarRating from 'vue-star-rating'
 import Title from './Layout/Title.vue'
-import TrastornoImage from '../assets/images/trastornos.png'
+import TrastornoImage from '../assets/images/rachael.png'
 
 export default {
     name: 'Projects',
@@ -154,7 +154,7 @@ export default {
             },
             {
                 id: 3,
-                image: TrastornoImage,
+                image: 'https://portfolio-fenrissvg.vercel.app/assets/trastornos.d968bf6c.png',
                 href: 'https://trastorno-website.vercel.app/',
                 title: 'Webpage about disorder mental.',
                 icons:{
@@ -193,7 +193,7 @@ export default {
             },
             {
                 id: 5,
-                image: 'src/assets/images/rachael.png',
+                image: TrastornoImage,
                 href: 'https://rachael.vercel.app/',
                 title: 'Rachael.',
                 icons:{
