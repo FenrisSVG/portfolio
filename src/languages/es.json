@@ -16,13 +16,14 @@
         "title-three": "03. Proyectos. 🎉",
         "title-four": "04. Contactame. 🎉"
     },
+    "projects": {
+        "text": "Lista de páginas que he construido no oficiales si como practicas de FrontEnd Mentor o páginas individuales."
+    },
     "contact": {
         "title": "Sobre mi perfil.",
         "text": "Estoy abierto a sugerencias o cualquier solicitud de empleo.",
         "list-one": "Department: ",
         "title-two": "Pongamonos en contacto.",
-        "label-one": "NOMBRE COMPLETO.",
-        "label-two": "EMAIL.",
-        "label-three": "MENSAJE."
+        "button": "Enviar Mensaje."
     }
 }

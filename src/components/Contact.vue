@@ -4,8 +4,8 @@
         <div class="form-container">
             <div class="contact-info">
                 <header class="contact-info__header">
-                    <h3 class="contact-info__title">Sobre mi perfil.</h3>
-                    <p class="contact-info__text">Estoy abierto a sugerencias o solicitudes de empleo.</p>
+                    <h3 class="contact-info__title" data-section="contact" data-value="title">Sobre mi perfil.</h3>
+                    <p class="contact-info__text" data-section="contact" data-value="text">Estoy abierto a sugerencias o solicitudes de empleo.</p>
                 </header>
                 <footer class="contact-info__footer" v-if="info.length > 0">
                     <div class="contact-info__perfil" v-for="item in info" :key="item.id">
@@ -25,15 +25,15 @@
                     </label>
                 </div>
                 <div class="contact-form__group">
-                    <label for="message" class="contact-form__label">
-                        MENSAJE.
+                    <label for="message" class="contact-form__label" data-section="contact" data-value="label-three">
+                        MESSAGE.
                         <textarea name="message" cols="30" rows="4"
-                        class="contact-form__textarea" placeholder="Escriba un mensaje." required
+                        class="contact-form__textarea" placeholder="Write a message." required
                         maxlength="250"></textarea>
                     </label>
                 </div>
                 <div class="contact-form__group">
-                    <button type="submit" class="contact-form__button">Send Message.</button>
+                    <button type="submit" class="contact-form__button" data-section="contact" data-value="button">Enviar Mensaje.</button>
                 </div>
             </form>
         </div>
@@ -79,17 +79,17 @@ export default{
                 {
                     id: 1,
                     icon: 'fa-solid fa-user-plus',
-                    label: 'NOMBRE COMPLETO.',
+                    label: 'FULL NAME.',
                     type: 'text',
                     name: 'fullname',
-                    placeholder: 'Ingrese su nombre completo.'
+                    placeholder: 'Type your full name.'
                 },
                 {
                     id: 2,
                     icon: 'fa-regular fa-envelope',
                     type: 'email',
                     name: 'email',
-                    label: 'CORREO ELECTRONICO.',
+                    label: 'EMAIL ADDRESS.',
                     placeholder: 'Example@gmail.com.'
                 },
                 // {

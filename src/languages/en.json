@@ -7,7 +7,7 @@
     },
     "main": {
         "presentation": "Hello!, my name is",
-        "phrase": "If I can't do great things, I make small things great",
+        "phrase": "If I can't do great things, I make small things great.",
         "button-one": "Contact me.",
         "button-two": "Download CV.",
         "title-one": "01. About me. 🔎",
@@ -15,13 +15,15 @@
         "title-three": "03. Projects. 🎉",
         "title-four": "04. Contact me. 🎉"
     },
+    "projects": {
+        "text": "List of pages I have built unofficial if as a FrontEnd Mentor internship or individual pages.",
+        "link": "FrontEnd Mentor"
+    },  
     "contact": {
         "title": "About my profile.",
         "text": "I'm open for any suggestion or just any job application.",
         "list-one": "Department: ",
         "title-two": "Let's Get in Touch.",
-        "label-one": "FULL NAME.",
-        "label-two": "EMAIL ADRESS.",
-        "label-three": "MESSAGE."
+        "button": "Send Message."
     }
 }

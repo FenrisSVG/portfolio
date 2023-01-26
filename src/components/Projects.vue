@@ -2,11 +2,12 @@
     <section class="projects-section" id="proyectos">
         <div class="projects-section__text">
             <Title list="03." title="Proyectos que he construido 🎉" name="title-three" />
-            <p class="projects-text">Lista de páginas que he construido no oficiales si como practicas
+            <p class="projects-text" data-section="projects" data-value="text">Lista de páginas que he construido no oficiales si como practicas
                 de 
                 <span>
-                    <a class="projects-text__link" href="https://www.frontendmentor.io/challenges" target="_blank" rel="noopener noreferrer nofollow">FrontEnd Mentor</a>
-                </span> o individuales. 
+                    <a class="projects-text__link" href="https://www.frontendmentor.io/challenges" target="_blank" rel="noopener noreferrer nofollow"
+                    data-section="projects" data-value="link">FrontEnd Mentor</a>
+                </span> o páginas individuales. 
             </p>
         </div>
         <article class="projects-article"  v-if="projects.length > 0">
