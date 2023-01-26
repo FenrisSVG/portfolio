@@ -40,9 +40,7 @@
                     <div class="card-footer__frameworks">
                         <h4 class="card-footer__title">{{item.frameworkTitle}}</h4>
                         <div class="card-header__techno card-header__techno--flex">
-                            <i v-if="item.isIcon" :class="item.iconFramework"></i>
-                            <img v-else src="../assets/icons/tailwind-64x64.png" loading="lazy"
-                            alt="css framework tailwind icon" class="card-header__image">
+                            <i :class="item.iconFramework"></i>
                             <img v-if="item.secondFramework" loading="lazy" class="card-header__image--astro"
                             src="../assets/icons/astro.png" alt="astro framework vercel icon">
                         </div>
@@ -55,9 +53,7 @@
                     <div class="card-footer__pre">
                         <h4 class="card-footer__title">{{item.preTitle}}</h4>
                         <div class="card-header__techno">
-                            <i :class="item.iconPre" v-if="!item.isIcon"></i>
-                            <img v-else src="../assets/icons/babel-64x64.png" loading="lazy"
-                            alt="js babel icon" class="card-header__image">
+                            <i :class="item.iconPre"></i>
                         </div>
                         <p class="card-header__text">{{item.preProcesador}}</p>
                     </div>
@@ -68,6 +64,7 @@
                 title="Controlador"
                 image=""
                 alt=""
+                icon="fab fa-git-alt card-header__icon"
                 spanTitle="Versiones."
                 techno="GIT."
                 :isIcon="true"
@@ -83,21 +80,22 @@
                 :hasOneTechno="true" />
             <!-- CARD DE SQL-->
             <Technos className="card card--four" 
-                    title="Bases de "
-                    spanTitle="Datos."
-                    image="MySQL-64x64.png" 
-                    alt="mysql database icon" 
-                    techno="MySQL"
-                    :isIcon="false"
-                    :hasOneTechno="true" />
+                title="Bases de "
+                image=""
+                alt=""
+                icon="devicon-mysql-plain-wordmark card-header__icon"
+                spanTitle="Datos."
+                techno="MySQL"
+                :isIcon="true"
+                :hasOneTechno="true" />
             <!-- CARD DE CYPRESS-->
             <Technos className="card card--seven" 
-                    spanTitle="Testing"
-                    image="cypress.png" 
-                    alt="cypress testing icon" 
-                    techno="Cypress"
-                    :isIcon="false"
-                    :hasOneTechno="true" />
+                spanTitle="Testing"
+                image="cypress.png" 
+                alt="cypress testing icon" 
+                techno="Cypress"
+                :isIcon="false"
+                :hasOneTechno="true" />
         </article>
     </section>
 </template>
@@ -121,12 +119,11 @@ export default {
                 icon: 'fab fa-css3-alt card-header__icon',
                 name: 'CSS3',
                 frameworkTitle: 'Frameworks',
-                iconFramework: 'fab fa-sass card-header__icon',
+                iconFramework: 'devicon-tailwindcss-plain card-header__icon',
                 framework: 'TailwindCSS',
                 preTitle: 'Pre-Procesador',
                 iconPre: 'fab fa-sass card-header__icon',
                 preProcesador: 'Sass',
-                isIcon: false,
                 class: 'card card--five',
                 titleClass: 'card-header__title card-header__title--flex',
                 secondFramework: false
@@ -141,9 +138,8 @@ export default {
                 framework: 'VueJS',
                 framework2: 'Astro',
                 preTitle: 'Transpilador',
-                iconPre: 'fab fa-sass card-header__icon',
+                iconPre: 'devicon-babel-plain card-header__icon',
                 preProcesador: 'Babel',
-                isIcon: true,
                 class: 'card card--six',
                 titleClass: 'card-header__title card-header__title--flex',
                 typescript: [false, true],

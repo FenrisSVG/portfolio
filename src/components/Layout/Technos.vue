@@ -7,7 +7,7 @@
                     :src="`/src/assets/icons/${image}`" class="card-header__image"
                     :alt="alt" loading="lazy">
                     <i  v-else-if="isIcon"
-                        class="fab fa-git-alt card-header__icon"></i>
+                        :class="icon"></i>
             </div>
             <p class="card-header__text">{{techno}}</p>
         </div>
@@ -29,6 +29,7 @@
 export default {
     name: 'Technos',
     props:{
+        icon: String,
         title: {
             type: String,
             default: ''
@@ -41,11 +42,12 @@ export default {
         },
         image: {
             type: String,
+            default: '',
             required: true
         },
         alt:{
             type: String,
-            default: 'Icon Techno Front-End',
+            default: 'Icon Techno Front-End from DevIcons or Font-Awesome',
             required: true
         },
         techno:{

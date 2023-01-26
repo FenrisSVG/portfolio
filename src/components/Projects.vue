@@ -39,7 +39,7 @@
                     <div class="projects-article__techno projects-article__techno--secondary"
                     v-else-if="!item.isIcon">
                         <div class="projects-article__devs projects-article__devs--secondary">
-                            <img :src="item.icons.srcTailwind" alt="utility framework tailwind logo" loading="lazy" :class="item.icons.classImage">
+                            <i :class="item.icons.srcTailwind"></i>
                             <i :class="item.icons.sass"></i>
                             <p class="projects-article__devs-text">
                                 {{item.icons.name2}}
@@ -52,7 +52,7 @@
                             </p>
                         </div>
                         <div class="projects-article__devs projects-article__devs--secondary">
-                            <img :src="item.icons.srcVite" alt="utility framework tailwind logo" loading="lazy" class="projects-article__devs-image">
+                            <i :class="item.icons.srcVite"></i>
                             <p class="projects-article__devs-text">
                                 {{item.icons.name3}}
                             </p>
@@ -139,10 +139,10 @@ export default {
                 icons:{
                     vuejs: 'fab fa-vuejs projects-article__devs-icon',
                     name: 'VueJS',
-                    srcTailwind: 'src/assets/icons/tailwind-64x64.png',
+                    srcTailwind: 'devicon-tailwindcss-plain projects-article__devs-icon',
                     sass: 'fab fa-sass projects-article__devs-icon projects-article__devs-icon--sass',
                     name2: 'Tailwind',
-                    srcVite: '../assets/icons/vite-64x64.png',
+                    srcVite: 'src/assets/icons/vite-64x64.png',
                     name3: 'Vite',
                     classImage: 'projects-article__devs-image'
                 },
@@ -161,9 +161,8 @@ export default {
                     name: 'VueJS',
                     sass: 'fab fa-sass projects-article__devs-icon',
                     name2: 'Sass',
-                    srcVite: '../assets/icons/babel-64x64.png',
+                    srcVite: 'devicon-babel-plain colored projects-article__devs-icon',
                     name3: 'Babel',
-                    classImage: 'projects-article__devs-image projects-article__devs-image--tailwind'
                 },
                 description: 'proyecto de universidad',
                 year: 2022,
@@ -193,7 +192,7 @@ export default {
             },
             {
                 id: 5,
-                image: '../assets/images/rachael.png',
+                image: 'src/assets/images/rachael.png',
                 href: 'https://rachael.vercel.app/',
                 title: 'Rachael.',
                 icons:{
@@ -201,9 +200,8 @@ export default {
                     name: 'VueJS',
                     sass: 'fab fa-sass projects-article__devs-icon',
                     name2: 'Sass',
-                    srcVite: 'https://portfolio-fenrissvg.vercel.app/assets/icons/vite-64x64.png',
+                    srcVite: 'devicon-python-plain-wordmark projects-article__devs-icon',
                     name3: 'Python',
-                    classImage: 'projects-article__devs-image projects-article__devs-image--tailwind',
                 },
                 description: 'proyecto de universidad',
                 year: 2022,

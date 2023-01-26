@@ -225,13 +225,7 @@
         display: grid;
         grid-template-columns: repeat(2,minmax(min-content,fit-content));
         grid-template-rows: repeat(2,minmax(min-content,fit-content));
-        padding: 0;
-    }
-}
-
-.card--six{
-    @include laptop{
-        padding-bottom: 1.6em;
+        padding-bottom: 10px;
     }
 }
 
@@ -250,7 +244,7 @@
             position: absolute;
             top: 25px;
             left: 0;
-            height: 90%;
+            height: 80%;
             width: 1px;
             background-color: $title-color;
         }
@@ -289,4 +283,3 @@
         cursor: pointer;
     }
 }
-
