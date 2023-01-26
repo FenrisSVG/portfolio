@@ -73,7 +73,7 @@
             <Technos className="card card--three" 
                 title="Empaquetar"
                 spanTitle="proyectos."
-                :image=image 
+                :image= imageVite 
                 alt="package folder vite icon" 
                 techno="VITE"
                 :isIcon="false"
@@ -91,7 +91,7 @@
             <!-- CARD DE CYPRESS-->
             <Technos className="card card--seven" 
                 spanTitle="Testing"
-                image="cypress.png" 
+                :image = imageCypress 
                 alt="cypress testing icon" 
                 techno="Cypress"
                 :isIcon="false"
@@ -104,6 +104,7 @@
 import Title from './Layout/Title.vue'
 import Technos from './Layout/Technos.vue'
 import Vite from '../assets/icons/vite-64x64.png'
+import Cypress from '../assets/icons/cypress.png'
 
 export default {
     name: 'Conocimientos',
@@ -113,7 +114,8 @@ export default {
     },
     data(){
         return{
-            image: Vite,
+            imageVite: Vite,
+            imageCypress: Cypress,
             isIcon: false,
             technos:[{
                 id: 1,
