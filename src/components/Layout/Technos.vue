@@ -4,7 +4,7 @@
         <div class="card-header" v-if="hasOneTechno">
             <div class="card-header__techno">
                 <img v-if="!isIcon"
-                    :src="`/src/assets/icons/${image}`" class="card-header__image"
+                    :src="`../assets/icons/${image}`" class="card-header__image"
                     :alt="alt" loading="lazy">
                     <i  v-else-if="isIcon"
                         :class="icon"></i>

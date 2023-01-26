@@ -161,7 +161,7 @@ export default {
                     name: 'VueJS',
                     sass: 'fab fa-sass projects-article__devs-icon',
                     name2: 'Sass',
-                    srcVite: 'devicon-babel-plain colored projects-article__devs-icon',
+                    srcVite: 'devicon-babel-plain projects-article__devs-icon',
                     name3: 'Babel',
                 },
                 description: 'proyecto de universidad',
