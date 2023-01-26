@@ -1,5 +1,5 @@
 <template>
-    <section class="contact-section">
+    <section class="contact-section" id="contacto">
         <Title list="04." title="Contactame." name="title-four" />
         <div class="form-container">
             <div class="contact-info">

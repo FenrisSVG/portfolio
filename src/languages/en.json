@@ -14,5 +14,14 @@
         "title-two": "02. Technologicals tools. 💻",
         "title-three": "03. Projects. 🎉",
         "title-four": "04. Contact me. 🎉"
+    },
+    "contact": {
+        "title": "About my profile.",
+        "text": "I'm open for any suggestion or just any job application.",
+        "list-one": "Department: ",
+        "title-two": "Let's Get in Touch.",
+        "label-one": "FULL NAME.",
+        "label-two": "EMAIL ADRESS.",
+        "label-three": "MESSAGE."
     }
 }

@@ -15,5 +15,14 @@
         "title-two": "02. Herramientas Tecnológicas. 💻",
         "title-three": "03. Proyectos. 🎉",
         "title-four": "04. Contactame. 🎉"
+    },
+    "contact": {
+        "title": "Sobre mi perfil.",
+        "text": "Estoy abierto a sugerencias o cualquier solicitud de empleo.",
+        "list-one": "Department: ",
+        "title-two": "Pongamonos en contacto.",
+        "label-one": "NOMBRE COMPLETO.",
+        "label-two": "EMAIL.",
+        "label-three": "MENSAJE."
     }
 }
